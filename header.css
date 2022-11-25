@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+* {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em,
+i,
+address {
+    font-style: normal;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ~여기까지 reset.css */
+
+h1 {
+    display: block;
+    margin: 0;
+    padding: 30px 0;
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header .gnb>ul {
+    position: flex;
+    width: 1054px;
+    padding: 30px 0;
+
+    display: flex;
+    text-align: end;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+    flex: 1;
+    line-height: 50px;
+}
+
+.mainVisual {
+    position: relative;
+    height: 500px;
+    background: url(./img/cellular-g58fde039b_1920.jpg) no-repeat center center/cover;
+}
+
+.mainVisual::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to left, #00000083, transparent 50%);
+}
+
+.mainVisual .inner {
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+
+.mainVisual .inner h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    /* text-indent: -4px; */
+    margin: 0 0 35px 0;
+    text-align: end;
+}
+
+.mainVisual .inner p {
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(255, 238, 251);
+    line-height: 1;
+    text-align: end;
+}
+
+.mainContent {
+    padding: 200px;
+}
+
+.mainContent h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.mainContent p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.mainContent .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.mainContent figure {
+    flex: 1;
+}
+
+.mainContent figure img {
+    width: 100%;
+}
+
+.pseudo {
+    padding: 120px 0;
+    background-color: #f5f9ff;
+}
+
+.pseudo h2 {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.pseudo p {
+    text-align: center;
+    margin: 0 0 100px 0;
+}
+
+.pseudo .inner {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.pseudo .inner .con {
+    position: relative;
+    margin: 10px;
+    padding: 50px 50px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.pseudo .inner .con h3 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    /* background-color: #f8b4c4; */
+}
+
+.pseudo .inner .con p {
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    margin: 10px;
+}
+
+
+
+.pseudo .inner .con figure img {
+    width: 100%;
+}
+
+.pseudo .inner .con::after {
+    content: attr(data-txt);
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background: #a3abbd;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+.footer {
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid#ddd;
+}
+
+.footer .list {
+    font-size: 0;
+    margin: 0 0 10px 0;
+}
+
+.footer .list li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.footer .list li~li::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    margin: 0 10px;
+    /* vertical-align: -3px; 미세한 조정이 필요할때 이걸 쓰는데 이해가 아직은 어려우니 이런게 있다고만 알고 있기*/
+}
+
+.footer .list .bold {
+    font-weight: 500;
+}
